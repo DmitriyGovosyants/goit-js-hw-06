@@ -7,10 +7,10 @@ const ingredients = [
     "Condiments",
   ];
 
-const makeIngredientsOptions = options => {
-    return ingredients.map(option => {
+const makeIngredientsOptions = () => {
+    return ingredients.map(ingredient => {
         const itemEl = document.createElement("li");
-        itemEl.textContent = option;
+        itemEl.textContent = ingredient;
         itemEl.classList.add('item');
 
         return itemEl;
