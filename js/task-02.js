@@ -7,7 +7,7 @@ const ingredients = [
     "Condiments",
   ];
 
-const makeIngredientsOptions = () => {
+const makeIngredientsMarkup = () => {
     return ingredients.map(ingredient => {
         const itemEl = document.createElement("li");
         itemEl.textContent = ingredient;
@@ -18,5 +18,5 @@ const makeIngredientsOptions = () => {
 }
 
 const ingredientsEl = document.querySelector('#ingredients');
-const elements = makeIngredientsOptions(ingredients);
+const elements = makeIngredientsMarkup(ingredients);
 ingredientsEl.append(...elements);
