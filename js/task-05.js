@@ -4,23 +4,11 @@ const refs = {
 }
 
 refs.nameInput.addEventListener('input', onOutputNameChange);
-// refs.nameInput.removeEventListener('input', on);
-
-// function onOutputNameChange(event) {
-//     refs.nameOutput.textContent = event.currentTarget.value;
-// }
 
 function onOutputNameChange(event) {
-    if (event.currentTarget.value === '') {
-        refs.nameOutput.textContent = "fdfasdf"
+    if (event.currentTarget.value.length === 0) {
+        refs.nameOutput.textContent = "Anonymous";
+    } else {
+        refs.nameOutput.textContent = event.currentTarget.value;
     }
-    refs.nameOutput.textContent = event.currentTarget.value;
 }
-
-// function on(event) {
-//     // refs.nameOutput.textContent = event.currentTarget.value;
-//     if () {
-//         refs.nameOutput.textContent = "fdfasdf"
-//     }
-// }
-
